@@ -1,0 +1,22 @@
+
+@ParcelManagement_HostAddress = https://localhost:5224
+
+### Get all parcels
+GET {{ParcelManagement_HostAddress}}/api/parcels
+Accept: application/json
+
+### Get parcel by id (replace with real Id from previous call)
+GET {{ParcelManagement_HostAddress}}/api/parcels/00000000-0000-0000-0000-000000000000
+Accept: application/json
+
+### Create a new parcel
+POST {{ParcelManagement_HostAddress}}/api/parcels
+Content-Type: application/json
+Accept: application/json
+
+{
+  "trackingNumber": "DPD-987654",
+  "recipientName": "Test Recipient",
+  "destinationAddress": "Meadowdale Depot",
+  "weightKg": 3.2
+}
